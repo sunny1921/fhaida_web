@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details</title>
+    <link rel="stylesheet" href="property.css">
+</head>
+<body>
+    <header>
+        <button onclick="window.history.back();">Back</button>
+        <h1>Property Details</h1>
+    </header>
+    
+    <div class="image-gallery">
+        <!-- Image gallery with placeholders for fullscreen functionality -->
+        <img src="https://media.istockphoto.com/id/1448381278/photo/the-side-view-of-a-large-gray-craftsman-new-construction-house-with-a-landscaped-yard-a-three.jpg?s=612x612&w=0&k=20&c=F9MAr_6v9dreOOzJq0DkzOOkh8CycFV7Da4o1FNMr1o=" alt="Property Exterior">
+        <img src="https://media.istockphoto.com/id/1158770746/photo/shot-of-a-bright-cozy-modern-apartment-with-big-windows-decorations-and-stylish-furniture.jpg?s=612x612&w=0&k=20&c=OZRNqYtvfJzwPpOK8xoEnh4QY1mABVkMD5tCQ0KCDk4=" alt="Interior Living Room">
+        <img src="https://media.istockphoto.com/id/1432543179/photo/light-kitchen-interior-with-bar-countertop-and-seats-shelves-and-panoramic-window.jpg?s=612x612&w=0&k=20&c=OuTbQDEiT_Pcs_FILVNkjyKpt__ADDS4FbSwjFs6kRs=" alt="Kitchen">
+        <img src="https://media.istockphoto.com/id/1194686012/photo/bedroom-in-new-luxury-home.jpg?s=612x612&w=0&k=20&c=X6Ymu7p4GM7X_Su11DAZ_3WT8McL4xchV7ZLv6IMsM4=" alt="Bedroom">
+    </div>
+
+    <div class="actions">
+        <button id="scheduleVisit" onclick="toggleModal(true)">Schedule Visit</button>
+        <button id="saveProperty">Save Property</button>
+        <button onclick="shareProperty()">Share</button>
+    </div>
+
+    <!-- Modal for scheduling a visit -->
+    <div id="visitModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleModal(false)">&times;</span>
+            <h2>Schedule a Visit</h2>
+            <input type="date" id="visitDate">
+            <input type="time" id="visitTime">
+            <button onclick="scheduleVisit()">Confirm</button>
+        </div>
+    </div>
+
+    <textarea id="queryBox" placeholder="Ask a query to the broker..."></textarea>
+    <button onclick="sendQuery()">Send Query</button>
+
+    <section class="property-details">
+        <h2>About the Property</h2>
+        <p>This beautiful property is located in a serene environment with spacious rooms and modern amenities.</p>
+
+        <h3>Property Features</h3>
+        <dl>
+            <dt>Location Information</dt>
+            <dd>123 Main St, Mumbai, Maharashtra</dd>
+
+            <dt>Interior Features</dt>
+            <dd>3 Bedrooms, 2 Bathrooms, Fully Furnished, Modern Kitchen</dd>
+
+            <dt>Exterior Features</dt>
+            <dd>North Facing, Balcony with views, Landscaped Gardens</dd>
+
+            <dt>Additional Information</dt>
+            <dd>Parking Space, 24x7 Security, Gym, Swimming Pool, Community Hall</dd>
+        </dl>
+    </section>
+
+    <!-- Google Map Location -->
+    <section class="google-map">
+        <h3>Location on Map</h3>
+        <iframe
+          width="600"
+          height="450"
+          style="border:0"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Space+Needle,Seattle+WA">
+        </iframe>
+    </section>
+
+    <section class="loan-calculator">
+        <h3>Loan Calculator</h3>
+        <input type="number" id="price" placeholder="List Price (₹)">
+        <input type="number" id="downPayment" placeholder="Down Payment (₹)">
+        <input type="number" id="interestRate" value="3.525">
+        <input type="number" id="term" value="30">
+        <button onclick="calculateLoan()">Calculate</button>
+        <div id="loanResult"></div>
+    </section>
+
+    <footer>
+        <p>© 2024 Real Estate Brokerage, Inc.</p>
+    </footer>
+    <script src="property.js"></script>
+</body>
+</html>

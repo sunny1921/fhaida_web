@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f4f4f4; /* Soft background for easier viewing */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+button {
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #000; /* Black button backgrounds */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth color change and subtle transform */
+}
+
+button:hover {
+    background-color: #555; /* Dark grey on hover */
+    transform: scale(1.05); /* Slight increase in size */
+}
+
+.filters {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.filters select {
+    padding: 10px;
+    margin: 5px;
+    width: 180px;
+    background-color: #eaeaea; /* Light grey background for dropdowns */
+    border: 1px solid #ccc; /* Defined borders for clarity */
+    border-radius: 5px; /* Rounded corners for dropdowns */
+    transition: all 0.3s; /* Smooth transitions for interactions */
+}
+
+.filters select:hover {
+    background-color: #ddd; /* Slightly darker on hover */
+    border-color: #bbb; /* Darker border on hover */
+}
+
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+    padding: 20px;
+    animation: fadeIn 1s; /* Fade-in animation for loading the catalog */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.catalog-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 8px; /* Rounded corners for catalog items */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transformations */
+}
+
+.catalog-item:hover {
+    transform: translateY(-5px); /* Slight raise effect on hover */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* Enhanced shadow on hover */
+}
+
+.catalog-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px; /* Rounded top corners for images */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 20px;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
+}

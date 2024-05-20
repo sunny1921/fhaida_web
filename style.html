@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Real Estate Catalog</title>
+</head>
+<body>
+    <header>
+        <button onclick="window.history.back();">Back</button>
+        <h1>Real Estate Listings</h1>
+    </header>
+    <div class="filters">
+        <select id="locationFilter">
+            <option value="">Select Location</option>
+            <option value="Andheri">Andheri</option>
+            <option value="Bandra">Bandra</option>
+            <option value="Juhu">Juhu</option>
+            <option value="Powai">Powai</option>
+            <option value="Goregaon">Goregaon</option>
+            <option value="Malad">Malad</option>
+            <option value="Dadar">Dadar</option>
+            <option value="Colaba">Colaba</option>
+            <option value="Santa Cruz">Santa Cruz</option>
+            <option value="Vashi">Vashi</option>
+            <option value="Kurla">Kurla</option>
+        </select>
+        <select id="statusFilter">
+            <option value="">Select Status</option>
+            <option value="Active">Active</option>
+            <option value="In Process">In Process</option>
+            <option value="Sold">Sold</option>
+        </select>
+        <select id="bhkFilter">
+            <option value="">Select BHK</option>
+            <option value="1BHK">1BHK</option>
+            <option value="2BHK">2BHK</option>
+            <option value="3BHK">3BHK</option>
+        </select>
+        <select id="priceFilter">
+            <option value="">Select Price Range</option>
+            <option value="0-1000000">Under 10 Lakh</option>
+            <option value="1000000-2000000">10 to 20 Lakh</option>
+            <option value="2000000-3000000">20 to 30 Lakh</option>
+            <option value="3000000">Above 30 Lakh</option>
+        </select>
+        <select id="facingFilter">
+            <option value="">Select Facing</option>
+            <option value="East">East</option>
+            <option value="West">West</option>
+            <option value="North">North</option>
+            <option value="South">South</option>
+        </select>
+        <select id="furnishingFilter">
+            <option value="">Select Furnishing</option>
+            <option value="Fully Furnished">Fully Furnished</option>
+            <option value="Semi Furnished">Semi Furnished</option>
+            <option value="Unfurnished">Unfurnished</option>
+        </select>
+        <select id="typeFilter">
+            <option value="">Select Property Type</option>
+            <option value="Individual House">Individual House</option>
+            <option value="Flat">Flat</option>
+        </select>
+        <select id="sortFilter" onchange="sortProperties()">
+            <option value="">Sort By</option>
+            <option value="priceAsc">Price Ascending</option>
+            <option value="priceDesc">Price Descending</option>
+            <option value="dateListed">Date Listed</option>
+        </select>
+    </div>
+    <div class="catalog">
+        <!-- Property cards injected here by JavaScript -->
+    </div>
+    <footer>
+        <p>© 2024 Real Estate Brokerage, Inc.</p>
+    </footer>
+    <script src="style.js"></script>
+</body>
+</html>
